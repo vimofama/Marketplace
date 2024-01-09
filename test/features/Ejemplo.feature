@@ -1,6 +1,5 @@
-# Created by DELL at 8/1/2024
+# Created by Cesar at 08/01/2024
 # language: es
-
 Característica: # Enter feature name here
   # Enter feature description here
 

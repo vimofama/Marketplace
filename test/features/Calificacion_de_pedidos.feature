@@ -6,5 +6,9 @@ Característica: Calificación de pedidos.
   mediante una calificación del 1 al 5,
   Para mejorar el proceso de pedidos.
 
-  Escenario: : # Enter scenario name here
-    # Enter steps here
+  Escenario: Los usuarios pueden proporcionar retroalimentación mediante calificación de pedidos
+    Dado que un minorista completa un pedido
+    Y la califiación de pedidos promedio del minorista es 5 con una sola calificación
+    Cuando el ususario proporciene una calificación del 3 al pedido
+    Entonces la calificación de pedidos promedio del minorista será 4.
+

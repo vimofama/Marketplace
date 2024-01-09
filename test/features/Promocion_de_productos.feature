@@ -5,5 +5,7 @@ Característica: Promoción de productos.
   Quiero destacar mis productos
   Para aumentar su visibilidad entre los clientes, aumentando la posibilidad de compra.
 
-  Escenario: : # Enter scenario name here
-    # Enter steps here
+  Escenario: Destacar productos para aumentar su visibilidad
+    Dado que el minorista tiene un producto
+    Cuando el minorista seleccione el producto para destacarlo
+    Entonces el producto se marca como destacado

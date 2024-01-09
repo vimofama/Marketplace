@@ -9,7 +9,8 @@ Característica: Monitoreo de pedidos.
   Regla: Cambio del estado del pedido
     Escenario: Pedido entregado.
       Dado que el minorista tiene un pedido con estado "Enviado"
-      Cuando el pedido es entregado #Cuando el minorista registra la entrega del pedido.
+      Cuando el pedido es entregado
+          #Cuando el minorista registra la entrega del pedido.
       Entonces el pedido debe cambiar el estado a "Entregado".
 
     Escenario: Pedido con retraso.
@@ -19,9 +20,11 @@ Característica: Monitoreo de pedidos.
 
     Escenario: Pedido entregado con retraso.
       Dado que el minorista tiene un pedido con estado "Con retraso"
-      Cuando el pedido es entregado #Cuando el minorista registra la entrega del pedido.
+      Cuando el pedido es entregado
+          #Cuando el minorista registra la entrega del pedido.
       Entonces el pedido debe cambiar el estado a "Entregado con retraso".
 
+  Regla: Consulta Detalles del Pedido
     Escenario: Consultar detalles de un pedido entregado
       Dado que el minorista tiene un pedido con el estado "Entregado"
       Cuando el minorista selecciona el pedido
@@ -29,7 +32,6 @@ Característica: Monitoreo de pedidos.
       * se muestra la ubicación actual del pedido.
       * se muestra la fecha y hora de la entrega del pedido
 
-  Regla: Consulta Detalles del Pedido
     Escenario: Consultar detalles de un pedido enviado
       Dado que el minorista tiene un pedido con el estado "Enviado"
       Cuando el minorista selecciona el pedido

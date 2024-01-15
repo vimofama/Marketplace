@@ -6,7 +6,11 @@ Característica: Solución de dudas.
   Para aumentar el número de cliente que escogen mis productos.
 
   Escenario: Responder a las preguntas para solventar dudas
-    Dado que recibo un mensaje directo con una pregunta de un posible comprador
-    Cuando el minorista responda la duda
-    Entonces el mensaje se elimina de la lista de mensajes directos
+    Dado que soy un minorista con una cuenta activa
+    Y tengo un mensaje directo pendiente de un posible comprador con la pregunta "¿Como funcionan los envios?"
+    Cuando el minorista responde a la pregunta con la informacion detallada sobre el proceso de envio
+    Entonces el sistema registra mi respuesta y la asocia al mensaje original
+    Y el mensaje directo con la pregunta "¿Como funcionan los envios?" cambia su estado a "respondido"
+    Y el sistema envia un mensaje directo al comprador con la respuesta a su pregunta
+    Y la respuesta queda registrada para futuras referencias en el historial de mensajes
 

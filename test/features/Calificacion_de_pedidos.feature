@@ -6,7 +6,7 @@ Característica: Calificación de pedidos.
   mediante una calificación del 1 al 5,
   Para mejorar el proceso de pedidos.
 
-  Escenario: Un cliente realiza un nueva calificación
+  Escenario: Un cliente realiza una nueva calificación
     Dado que un Pedido es "Entregado"
     Cuando el Cliente proporcione una Calificación al Pedido
     Entonces la Calificación promedio de pedidos del Minorista se actualizará

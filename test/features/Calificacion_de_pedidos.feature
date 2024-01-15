@@ -2,13 +2,12 @@
 # language: es
 Característica: Calificación de pedidos.
   Como minorista
-  Quiero que todos los usuarios proporcionen retroalimentación sobre los pedidos que han realizado,
+  Quiero que evaluar la retroalimentación que los clientes proporcionan sobre los pedidos,
   mediante una calificación del 1 al 5,
   Para mejorar el proceso de pedidos.
 
-  Escenario: Los usuarios pueden proporcionar retroalimentación mediante calificación de pedidos
-    Dado que un minorista completa un pedido
-    Y la califiación de pedidos promedio del minorista es 5 con una sola calificación
-    Cuando el ususario proporciene una calificación del 3 al pedido
-    Entonces la calificación de pedidos promedio del minorista será 4.
-
+  Escenario: Un cliente realiza un nueva calificación
+    Dado que un Pedido es "Entregado"
+    Cuando el Cliente proporcione una Calificación al Pedido
+    Entonces la Calificación promedio de pedidos del Minorista se actualizará
+    Y se clasificará la Calificación, por ejemplo, una Calificación de 1 o 2 será "Negativa", una Calificación de 3 será "Regular" y una Calificación de 4 o 5 será "Poitiva"

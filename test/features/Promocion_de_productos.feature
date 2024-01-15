@@ -5,7 +5,9 @@ Característica: Promoción de productos.
   Quiero destacar mis productos
   Para aumentar su visibilidad entre los clientes, aumentando la posibilidad de compra.
 
-  Escenario: Destacar productos para aumentar su visibilidad
-    Dado que el minorista tiene un producto
-    Cuando el minorista seleccione el producto para destacarlo
-    Entonces el producto se marca como destacado
+  Escenario: Destacar productos mediante pago
+    Dado que el Minorista tiene un Producto "Disponible"
+    Cuando el Minorista solicita destacar el Producto
+    Y realiza el Pago por la Promoción
+    Entonces el producto se marcará como "Destacado"
+    Y el producto se posicionará entre los primeros productos mostrados a los clientes, durante una semana.

@@ -2,7 +2,7 @@
 # language: es
 Característica: Generación de informes.
   Como minorista
-  Quiero informes sobre los ingresos y los productos más vendidos en cada mes
+  Quiero generar informes sobre los ingresos y los productos más vendidos en cada mes
   Para evaluar la eficiencia del negocio y optimizar el tiempo de análisis.
 
   Escenario: Generar informe mensual de ingresos y productos más vendidos

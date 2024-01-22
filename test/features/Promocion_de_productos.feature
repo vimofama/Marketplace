@@ -5,17 +5,17 @@ Característica: Promoción de productos.
   Quiero destacar mis productos
   Para aumentar su visibilidad entre los clientes, aumentando la posibilidad de compra.
 
-  Escenario: Destacar productos mediante pago
-    Dado que el Minorista tiene un Producto "Disponible"
-    Cuando el Minorista solicita destacar el Producto
-    Y realiza el Pago por la Promoción
-    Entonces el producto se marcará como "Destacado"
-    Y el producto se posicionará entre los primeros productos mostrados a los clientes, durante una semana.
+  Escenario: Destacar un producto mediante pago
+    Dado que un Minorista tiene un Producto de la Categoría "Vestimenta"
+    Y el Minorista ha Pagado por una Promoción
+    Cuando alguien busque un Producto de la Categoría "Vestimenta"
+    Entonces se mostrará el Producto en las primeras posiciones durante una semana.
 
-
-    Dado que el minorista ha pagado promoción
-    Cuando alguien busque un producto
-    Entonces se mostrará en las primeras posiciones durante una semana.
-
-
-    # Que pasaria si hay dos productos destacados?
+  Escenario: Varios productos destacados
+    Dado que un Minorista tiene un Producto de la Categoría "Vestimenta"
+    * el Minorista ha Pagado por una Promoción
+    * otro Minorista tiene un Producto de la Categoría "Vestimenta"
+    * el otro Minorista ha Pagado por una Promoción
+    * el primer Producto fue comprado más que el segundo Producto
+    Cuando alguien busque un Producto de la Categoría "Vestimenta"
+    Entonces se mostrará primero el Producto con más compras durante una semana.

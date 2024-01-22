@@ -24,6 +24,7 @@ Característica: Monitoreo de pedidos.
     Entonces se mostrará al pedido en la lista de pedidos con estado "Entregado"
     Y se mostrará la fecha de entrega.
 
+#Opción Dos
 #Característica: Monitoreo de pedidos.
 #  Como minorista
 #  Quiero dar seguimiento a los pedidos,

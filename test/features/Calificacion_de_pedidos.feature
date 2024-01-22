@@ -10,4 +10,11 @@ Característica: Calificación de pedidos.
     Dado que un Pedido es "Entregado"
     Cuando el Cliente proporcione una Calificación al Pedido
     Entonces la Calificación promedio de pedidos del Minorista se actualizará
-    Y se clasificará la Calificación, por ejemplo, una Calificación de 1 o 2 será "Negativa", una Calificación de 3 será "Regular" y una Calificación de 4 o 5 será "Positiva"
+    Y se le mostrará al Minorista al minorista los Pedidos calificados por debajo de 3.
+
+  #Alternativa:
+  #Escenario: Un cliente realiza una calificación negativa
+  #  Dado que un Pedido es "Entregado"
+  #  Cuando el Cliente proporcione una Calificación por debajo de 3 al Pedido
+  #  Entonces la Calificación promedio de pedidos del Minorista se actualizará
+  #  Y se le mostrará al Minorista al minorista la información del Pedido.

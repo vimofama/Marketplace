@@ -2,7 +2,7 @@
 # language: es
 Característica: Solución de dudas.
   Como minorista
-  Quiero solventar las dudas de los posibles compradores, a través de mensajes directos,
+  Quiero solventar las dudas de los posibles compradores, a través de comentarios publicos,
   Para aumentar el número de cliente que escogen mis productos.
 
   Escenario: Responder a las preguntas para solventar dudas
@@ -14,3 +14,6 @@ Característica: Solución de dudas.
     Y el sistema envia un mensaje directo al comprador con la respuesta a su pregunta
     Y la respuesta queda registrada para futuras referencias en el historial de mensajes
 
+    Dado que existen mensajes con preguntas sobre mis productos
+    Cuando el minorista responde a la pregunta con la informacion detallada sobre el producto
+    Entonces se mostrara la pregunta y respuesta en los comentarios del producto

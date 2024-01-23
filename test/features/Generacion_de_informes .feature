@@ -20,5 +20,6 @@ Característica: Generación de informes.
 
     Dado que el minorista tiene transacciones en enero
     Y la fecha actual es 1 de febrero
-    Cuando abre el dashboard de informes
-    Entonces se mostrara el informe con gráficos interactivos y paneles de control que pueden facilitar la identificación de tendencias y patrones
+    Cuando se muestra dashboard de informes
+    Entonces se mostrara el informe con gráficos interactivos
+    Y paneles de control sobre las tendencias y patrones

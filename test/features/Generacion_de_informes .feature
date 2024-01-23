@@ -16,3 +16,9 @@ Característica: Generación de informes.
     Dado que el minorista tiene transacciones en enero
     Cuando solicito el informe mensual de ingresos y productos más vendidos
     Entonces se mostrara el total de ingresos del mes de enero y una lista de los productos más vendidos con sus cantidades respectivas
+
+
+    Dado que el minorista tiene transacciones en enero
+    Y la fecha actual es 1 de febrero
+    Cuando abre el dashboard de informes
+    Entonces se mostrara el informe con gráficos interactivos y paneles de control que pueden facilitar la identificación de tendencias y patrones

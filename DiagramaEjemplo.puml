@@ -1,0 +1,43 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Alumno {
+nombre: string
+trabajo: Trabajo
+entregar_trabajo(trabajo: Trabajo, actividad: Actividad)
+}
+
+class Profesor {
+nombre: string
+calificar_trabajo(alumno: Alumno, calificacion: double)
+aprobar_alumno(alumno: Alumno)
+}
+
+class Actividad {
+nombre: string
+fecha_entrega: date
+rubrica: Rubrica
+trabajos: Trabajo[]
+esta_entregado_a_tiempo_el_trabajo(trabajo: Trabajo)
+set_trabajo(trabajo: Trabajo)
+}
+
+class Rubrica {
+criterio: string[]
+evaluar_trabajo(trabajo: Trabajo)
+}
+
+class Trabajo {
+nombre: string
+fecha: date
+calificacion: double
+contenido: int[]
+set_calificacion(calificacion: double)
+}
+
+Profesor --> Actividad
+Profesor --> Alumno
+Actividad --> Rubrica
+Alumno --> Trabajo
+
+@enduml

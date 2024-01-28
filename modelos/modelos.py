@@ -34,8 +34,8 @@ class Profesor:
     def __init__(self, nombre):
         self.nombre = nombre
 
-    def calificar_trabajo(self, alumno, actividad):
-        calificacion = actividad.rubrica.evaluar_trabajo(alumno.trabajo)
+    def calificar_trabajo(self, alumno, notas, actividad):
+        calificacion = actividad.rubrica.evaluar_trabajo(notas)
         alumno.trabajo.set_calificacion(calificacion)
         return calificacion
 
@@ -50,8 +50,8 @@ class Rubrica:
     def __init__(self, criterio):
         self.criterio = criterio
 
-    def evaluar_trabajo(self, trabajo):
-        return sum(trabajo.contenido) / len(self.criterio)
+    def evaluar_trabajo(self, notas):
+        return sum(notas) / len(self.criterio)
 
 
 class Trabajo:

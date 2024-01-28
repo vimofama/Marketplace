@@ -1,20 +1,14 @@
 # Created by Cesar at 09/01/2024
 # language: es
-Característica: Calificación de pedidos.
-  Como minorista
+Característica: Calificar el servicio de pedidos
+  Como administrador
   Quiero que todos los clientes proporcionen retroalimentación sobre los pedidos han recibido,
   mediante una calificación del 1 al 5,
-  Para evaluar el proceso de pedidos.
+  Para evaluar la confiabilidad de cada minorista
 
-  Escenario: Un cliente califica negativamente el pedido
-    Dado que un Cliente proporciona una Calificación de 2 a un Pedido
-    Cuando el Minorista solicite que se muestre las calificaciones de los Pedidos
-    Entonces se mostrará el promedio de Calificación de los pedidos
-    Y se mostrará una alerta con el número de pedidos calificados negativamente, por debajo de 3.
-
-  #Escenario: Un cliente califica positivamente el pedido
-  #  Dado que un Cliente proporciona una Calificación de 3 al Pedido
-  #  Cuando el Minorista solicite que se muestre la calificación de los Pedidos
-  #  Entonces se mostrará el promedio de Calificación de los pedidos
-  #  Y se mostrará el número de pedidos calificados positivamente.
-
+  Escenario: Clientes califican el servicio de pedidos
+    Dado que los Clientes han recibido sus Pedidos
+    Cuando los Clientes califiquen sus Pedidos del 1 al 5
+    Y un Minorista tengan 10 calificaciones como mínimo
+    Entonces el Minorista se clasificará como "Confiable" si tiene un promedio mayor a 2
+    Pero si no alcanza a ese promedio, se clasificará como "No confiable"

@@ -9,7 +9,7 @@ entregar_trabajo(trabajo: Trabajo, actividad: Actividad)
 
 class Profesor {
 nombre: string
-calificar_trabajo(alumno: Alumno, calificacion: double)
+calificar_trabajo(alumno: Alumno, notas: double[], actividad: Actividad)
 aprobar_alumno(alumno: Alumno)
 }
 
@@ -24,14 +24,14 @@ set_trabajo(trabajo: Trabajo)
 
 class Rubrica {
 criterio: string[]
-evaluar_trabajo(trabajo: Trabajo)
+evaluar_trabajo(notas: double[])
 }
 
 class Trabajo {
 nombre: string
 fecha: date
 calificacion: double
-contenido: int[]
+contenido: string
 set_calificacion(calificacion: double)
 }
 

@@ -1,19 +1,12 @@
 # Created by Cesar at 08/01/2024
 # language: es
-Característica: Solución de dudas.
+Característica: Solución de dudas
   Como minorista
-  Quiero solventar las dudas de los posibles compradores, a través de comentarios publicos,
-  Para aumentar el número de cliente que escogen mis productos.
+  Quiero solventar las dudas de los posibles compradores, a través de comentarios públicos,
+  Para aumentar el número de compradores que escogen mis productos.
 
   Escenario: Responder a las preguntas para solventar dudas
-    Dado que soy un minorista con una cuenta activa
-    Y tengo un mensaje directo pendiente de un posible comprador con la pregunta "¿Como funcionan los envios?"
-    Cuando el minorista responde a la pregunta con la informacion detallada sobre el proceso de envio
-    Entonces el sistema registra mi respuesta y la asocia al mensaje original
-    Y el mensaje directo con la pregunta "¿Como funcionan los envios?" cambia su estado a "respondido"
-    Y el sistema envia un mensaje directo al comprador con la respuesta a su pregunta
-    Y la respuesta queda registrada para futuras referencias en el historial de mensajes
-
-    Dado que existen mensajes con preguntas sobre mis productos
-    Cuando el minorista responde a la pregunta con la informacion detallada sobre el producto
-    Entonces se mostrara la pregunta y respuesta en los comentarios del producto
+    Dado que un Minorista tiene Comentarios con preguntas sobre mis Productos
+    Cuando el Minorista responde a los Comentarios
+    Y los Compradores respondan que fueron útiles las respuestas
+    Entonces se mostrarán las preguntas y respuestas en los Comentarios del Producto por orden de valoración de los Compradores

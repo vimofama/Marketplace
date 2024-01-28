@@ -13,7 +13,7 @@ def step_impl(context):
     """
     context.profesor = Profesor("nombre")
     context.alumno = Alumno("Mateo")
-    context.trabajo = Trabajo("Trabajo final", [10, 10, 10, 10])
+    context.trabajo = Trabajo("Trabajo final", "Lorem ipsum dolor sit amet.")
     context.actividad = Actividad("Trabajo final", datetime(2024, 1, 30),
                                   Rubrica(['Presentacion', 'Nivel tecnico', 'Organizacion', 'Riguroso']))
     context.alumno.entregar_trabajo(context.trabajo, context.actividad)
@@ -26,7 +26,7 @@ def step_impl(context):
     Debe existir una rúbrica
     el trabajo del alumno debe ser calificado por el profesor
     """
-    context.nota_obtenida = context.profesor.calificar_trabajo(context.alumno, context.actividad)
+    context.nota_obtenida = context.profesor.calificar_trabajo(context.alumno, [10, 10, 10, 10], context.actividad)
     assert 0 <= context.nota_obtenida <= 10, f"La nota {context.nota_obtenida} no está en el rango de 0 a 10"
 
 
@@ -44,5 +44,6 @@ def step_impl(context):
     """
     Si el estudiante tiene menos de 7 sobre 10 debe estar reprobado
     """
+    context.alumno.trabajo.calificacion = 7
     context.aprobado = context.profesor.aprobar_alumno(context.alumno)
     assert (context.aprobado == False), f"Estudiante {context.alumno.nombre} aprobado"

@@ -1,67 +1,24 @@
 # Created by DELL at 8/1/2024
 # language: es
-Característica: Monitoreo de pedidos.
+Característica: Monitoreo de pedidos
   Como minorista
-  Quiero conocer el estado de los pedidos,
-  con detalles sobre el proceso de envío y tiempo de entrega,
-  Para detectar problemas y garantizar la entrega
+  Quiero conocer el porcentaje de pedidos con retraso e información de dichos pedidos,
+  como la ubicación y el tiempo de retraso
+  Para detectar y solucionar patrones.
 
-  Escenario: Pedido es Pagado
-    Dado que un Pedido tiene el Estado "Pagado"
+  Escenario: Existen 3 pedidos con retraso en una sola ubicación y 2 pedidos entregados a tiempo
+    Dado que un Minorista tiene 3 Pedidos con "Retraso" para una misma ubicación
+    Y tiene 2 Pedidos entregados a tiempo
     Cuando se despliegue el Dashboard de Monitoreo
-    Entonces se mostrará al pedido en la lista de pedidos con estado "Pagado"
-    Y se mostrará su ubicación actual y fecha estimada de entrega
+    Entonces se mostrará el porcentaje de Pedidos con el valor de 60%
+    Y la ubicación donde se dieron estos retrasos
+    Y el promedio del tiempo de retraso
 
-  Escenario: Pedido es Enviado
-    Dado que un Pedido tiene el Estado "Enviados"
+  Escenario: Existen 3 pedidos con retraso en múltiples ubicaciones y 2 pedidos entregados a tiempo
+    Dado que un Minorista tiene 2 Pedidos con retraso para una ubicación
+    Y el Minorista tiene 1 Pedido con "Retraso" para otra ubicación
+    Y el Minorista tiene 2 Pedidos entregados a tiempo
     Cuando se despliegue el Dashboard de Monitoreo
-    Entonces se mostrará al pedido en la lista de pedidos con estado "Enviados"
-    Y se mostrará su ubicación actual y fecha estimada de entrega
-
-  Escenario: Pedido es Entregado
-    Dado que un Pedido tiene el Estado "Entregado"
-    Cuando se despliegue el Dashboard de Monitoreo
-    Entonces se mostrará al pedido en la lista de pedidos con estado "Entregado"
-    Y se mostrará la fecha de entrega.
-
-#Opción Dos
-#Característica: Monitoreo de pedidos
-#  Como minorista
-#  Quiero dar seguimiento a los pedidos
-#  con un resumen del total de pedidos pendientes de entrega, pagados, enviados, entregados y retrasados
-#  Para detectar problemas y garantizar la entrega
-
-#  Escenario: Pedido es Pagado
-#    Dado que el Dashboard de Monitoreo en pedidos con Estado "Pagado" tiene el valor de 5
-#    Y en el total de pedidos pendientes de entrega tiene el valor de 6
-#    Y un Cliente ha pagado un nuevo Pedido
-#    Cuando se muestre el Dashboard de Monitoreo
-#    Entonces el valor de Pedidos con Estado "Pagado" será de 6
-#    Y el valor del total de pedidos pendientes de entrega será de 7
-
-#  Escenario: Pedido es Enviado
-#    Dado que Dashboard de Monitoreo en pedidos con Estado "Enviado" tiene el valor de 6
-#    Y en pedidos con Estado "Pagado" tiene el valor de 4
-#    Y se ha registrado el envío de un Pedido
-#    Cuando se muestre el Dashboard de Monitoreo
-#    Entonces el valor de Pedidos con Estado "Enviado" será de 7
-#    Y el valor de Pedidos con Estado "Pagado" será de 3
-
-#  Escenario: Pedido es Entregado
-#    Dado que el Dashboard de Monitoreo en el total de pedidos pendientes de entrega tiene el valor de 5
-#    Y en pedidos con Estado "Entregado" tiene el valor de 10
-#    Y se ha registrado la entrega del Pedido
-#    Cuando se muestre el Dashboard de Monitoreo
-#    Entonces el valor del total de pedidos pendientes de entrega será de 4
-#    Y el valor de Pedidos con Estado "Entregado" será de 11
-
-#  Escenario: Pedidos con Retraso
-#    Dado que Dashboard de Monitoreo en pedidos con Estado "Enviado" tiene el valor de 8
-#    Y en pedidos con Estado "Retrasado" tiene el valor de 2
-#    Y se ha pasado la fecha estimada de entrega de un Pedido
-#    Cuando se muestre el Dashboard de Monitoreo
-#    Entonces el valor de Pedidos con Estado "Enviado" será de 7
-#    Y el valor de Pedidos con Estado "Retrasado" será de 3
-
-
-
+    Entonces se mostrará el porcentaje de Pedidos con el valor de 60%
+    Y las ubicaciones donde se dieron estos retrasos ordenados por la cantidad de Pedidos con "Retraso"
+    Y el promedio del tiempo de retraso por ubicación

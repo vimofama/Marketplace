@@ -4,7 +4,7 @@ Característica: Calificar el servicio de pedidos
   Como administrador
   Quiero que todos los clientes proporcionen retroalimentación sobre los pedidos han recibido,
   mediante una calificación del 1 al 5,
-  Para evaluar la confiabilidad de cada minorista
+  Para evaluar la confiabilidad de cada minorista.
 
   Escenario: Clientes califican el servicio de pedidos
     Dado que los Clientes han recibido sus Pedidos

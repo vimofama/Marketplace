@@ -26,6 +26,9 @@ class Actividad:
     def set_trabajo(self, trabajo):
         self.trabajos.append(trabajo)
 
+    def existe_trabajo(self, trabajo):
+        return trabajo in self.trabajos
+
 
 class Profesor:
 
@@ -51,7 +54,7 @@ class Rubrica:
         self.criterio = criterio
 
     def evaluar_trabajo(self, notas):
-        return sum(notas) / len(self.criterio)
+        return notas
 
 
 class Trabajo:

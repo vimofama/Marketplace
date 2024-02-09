@@ -21,6 +21,7 @@ Característica: Generación de métricas de ventas
    Tasa de ventas por vendedor
    Crecimiento mensual
   """
+"""
 
 Característica: Obtención de métricas de ventas mensualizadas por vendedor
   Como vendedor (minorista)
@@ -39,6 +40,30 @@ Característica: Obtención de métricas de ventas mensualizadas por vendedor
     Entonces se mostrará los ingresos totales e ingresos por producto
     Y determinará mi rendimiento comparando mi tasa de ventas con el promedio de todos los vendedores
     Y mostrará el crecimiento mensual de mis ventas
+"""
+
+Característica: Obtención de métricas de ventas mensualizadas por vendedor
+  Como vendedor (minorista)
+  Quiero evaluar mi rendimiento mediante las métricas: ingresos totales, ingresos por producto, tasa de ventas
+  y crecimiento mensual
+  Para encontrar las posibles causas de las métricas que están consiguiendo.
+
+  Escenario:
 
 
-  Escenario: Vendedor con rendimiento menor al promedio
+Característica: Obtención de métricas de ventas mensualizadas por vendedor
+  Como vendedor (minorista)
+  Quiero evaluar mi rendimiento mensual mediante los ingresos totales por productos
+  Para determinar posibles soluciones al presentarse un bajo rendimiento.
+
+  Escenario: Productos con bajo rendimiento
+    Dado que un vendedor tiene un Producto de la Categoría herramientas
+    Y los ingresos del producto son 30% inferior al promedio de los ingresos de los productos en la Categoría herramientas en el último mes
+    Cuando se despliegue el Dashboard de Métricas
+    Entonces se recomienda dar de baja al producto
+
+  Escenario: Ajuste de precios
+    Dado que un vendedor tiene un Producto de la Categoria herramientas
+    Y los ingresos del producto son entre 30% y 50% inferior al promedio los ingresos de los productos en la Categoría herramientas en el último mes
+    Cuando se despliegue el Dashboard de Métricas
+    Entonces se recomienda ajustar el precio del producto.

@@ -69,7 +69,7 @@ PRODUCT_DATA = {
 
 class Provider(faker.providers.BaseProvider):
 
-    def ecommerce_sale(self, month: int = None):
+    def ecommerce_sales(self, month: int = None):
         sale = []
 
         if month is None:

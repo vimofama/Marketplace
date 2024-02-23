@@ -6,7 +6,7 @@ fake.add_provider(Provider)
 
 
 def main():
-    ventas_diciembre = fake.ecommerce_sale(month=12)
+    ventas_diciembre = fake.ecommerce_sales(month=12)
 
     for producto in ventas_diciembre:
         print(
